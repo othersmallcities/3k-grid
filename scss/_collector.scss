@@ -1,0 +1,25 @@
+// This file is used to collect all partials and send them on to each grid & IE file.
+
+// For better overview, the import files are in the "import" folder.
+
+// Index:
+
+// 1. compass stuff
+// 2. tools: includes all variables, functions and mixins
+// 3. normalize: use instead of a reset, works better in my experinece! Make sure to disable all unneeded adjustments
+// 4. clearfix
+// 5. typography
+// 6. base styles for the grid, incl. styles for non grid sizes.
+// 7. site / page specific styles
+
+@import "compass/css3"; //to fine tune the output, see here: http://compass-style.org/help/tutorials/exclude_vendor_prefixes/ -> solution
+
+@import "import/tools"; 
+
+@import "import/normalize"; //adjust to your real needs! no extras!
+
+@import "import/clearfix";
+
+@import "import/typography";
+
+@import "import/layoutBase";

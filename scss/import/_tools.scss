@@ -1,0 +1,87 @@
+// This file should include all global variables, mixins and functions, so they can be easily reused.
+
+	//special variable to rule them all:
+
+	$em-base: 16px;
+
+	//do not change lightly! Test what happens! If you have to make it smaller, observe how it effects the layout!
+
+	// The em-base variable is works in together with the 
+		// $base-font-size 
+	// in 2.1 (typographic vars). 16px = 100% base font size. If this variable gets changed, everything will change too. Please observe.
+	// Please use the emCalc mixin (see 1. functions) to calulate other sizes.
+	// The em-base also regulates the grid breakpoints.
+
+
+// Index:
+
+// 1. Functions
+
+	// 1.1 emCalc
+
+// 2. Variables
+	
+	// 2.1 Typographic vars
+	// 2.2 Base colours
+	// 2.3 Tool vars (alignment, etc.)
+
+// ---> note: grid vars are definded in "import/_layoutbase.scss"! Other media query vars, independed of the grid could be defined here.
+
+// 3. Mixins
+
+	// 3.1 Retina background images
+
+// 1. Functions
+
+	// 1.1 emCalc
+
+	@function emCalc($pxWidth) {
+		@return $pxWidth / $em-base * 1em;
+	}
+	// This function allows to calculate em's just by adding a pixel value: emCalc(16px) -> result: 1em :)
+	// Leave out the px falue to use it easier `-`
+
+
+// 2. Variables
+
+	// 2.1 Typographic vars
+
+	$base-font-size: 100%;// If you need to change the global base font size, use this! 
+	$base-line-height: 1.6;// for optimal readability
+	$base-font-style: normal;
+	$base-font-weight: normal;
+	$base-font-family: "Hiragino Kaku Gothic ProN W3", "Meiryo", "MS PGothic", sans-serif;
+	$bold-font-family: "Hiragino Kaku Gothic StdN W8", "Meiryo Bold", "MS PGothic", sans-serif;
+
+	// 2.2 Base colours
+
+	$base-font-color: rgb(25,25,25); //to keep things easier on the eye! #000 is too strong in contrast, a dark gray is easier to read
+
+	$body-color: rgb(252,252,252); //a mild gray is nicer then pure white. Easier to see and read.
+
+	// 2.3 Tool variables
+
+	// ...which ever you like
+
+// 3. Mixins
+
+	// 3.1 Retina background images
+
+	@mixin image-2x($image, $width, $height) {
+		@media (min--moz-device-pixel-ratio: 1.3),
+		(-o-min-device-pixel-ratio: 2.6/2),
+		(-webkit-min-device-pixel-ratio: 1.3),
+		(min-device-pixel-ratio: 1.3),
+		(min-resolution: 1.3dppx) {
+			// on retina, use image that's scaled by 2
+			background-image: url($image);
+			background-size: $width $height;
+		}
+	}
+
+	// This mixin lets you apply retina ready background images.
+	// To use add it like this this: 
+		//background: url("logo.png") no-repeat;
+  		//@include image-2x("logo2x.png", 100px, 25px);
+  			//@include image-2x("image-uri", image-width, image-height);
+  	// The background-size of the 2x image has to be the same as the 1x image!

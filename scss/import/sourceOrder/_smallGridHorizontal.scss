@@ -1,0 +1,44 @@
+// This file contains small grid source ordering!
+
+// Please import into "_smallGrid.scss"
+
+    // 1. set up small grid push and pull
+
+    //push
+    .sPh-1,.sPh-2,.sPh-3,.sPh-4,.sPh-5,.sPh-6,.sPh-7,.sPh-8,.sPh-9,.sPh-10,.sPh-11,.sPh-12,
+    .ph-1,.ph-2,.ph-3,.ph-4,.ph-5,.ph-6,.ph-7,.ph-8,.ph-9,.ph-10,.ph-11,.ph-12 
+        {right: auto;}
+
+    //pull
+    .sPl-1,.sPl-2,.sPl-3,.sPl-4,.sPl-5,.sPl-6,.sPl-7,.sPl-8,.sPl-9,.sPl-10,.sPl-11,.sPl-12,
+    .pl-1,.pl-2,.pl-3,.pl-4,.pl-5,.pl-6,.pl-7,.pl-8,.pl-9,.pl-10,.pl-11,.pl-12 
+        {left: auto;}
+
+    // 2. push and pull each column with the right size
+    
+    //push
+    .sPh-1 {left:$c1;}
+    .sPh-2 {left:$c2;}
+    .sPh-3 {left:$c3;}
+    .sPh-4 {left:$c4;}
+    .sPh-5 {left:$c5;}
+    .sPh-6 {left:$c6;}
+    .sPh-7 {left:$c7;}
+    .sPh-8 {left:$c8;}
+    .sPh-9 {left:$c9;}
+    .sPh-10 {left:$c10;}
+    .sPh-11 {left:$c11;}
+    .sPh-12 {left:$c12;}
+    //pull
+    .sPl-1 {right:$c1;}
+    .sPl-2 {right:$c2;}
+    .sPl-3 {right:$c3;}
+    .sPl-4 {right:$c4;}
+    .sPl-5 {right:$c5;}
+    .sPl-6 {right:$c6;}
+    .sPl-7 {right:$c7;}
+    .sPl-8 {right:$c8;}
+    .sPl-9 {right:$c9;}
+    .sPl-10 {right:$c10;}
+    .sPl-11 {right:$c11;}
+    .sPl-12 {right:$c12;}

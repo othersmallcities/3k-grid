@@ -1,0 +1,65 @@
+// This is the samll grid for smaller view ports.
+
+// This grid is ideal for larger phones and smaller tablets.
+
+// The variable defining the viewport width is defined in "import/_tools.scss"
+
+// Index
+
+    // 1. Column setup
+
+    // 2. Small grid setup
+
+    // 3. Imports
+
+@media only screen and (min-width: $smallGrid) {
+
+    // 1. Column setup
+
+    // Setting up the columns behaviour, this applies for all grids from small up.
+    // Columns float left for now. If flexbox ever works or better, css grid layout and regions reach some browser support, lets kill this.
+    // Inline box is also not great, as there are problems with IE and some odd Android devices.
+    .col {
+        float: left; 
+        position: relative; // This way the cols will not overlap. It is also needed to enable source ordering!
+    }
+    // This class allows to center columns.
+    .centCol {
+        margin: 0 auto; 
+    }
+
+    // The last column in a row will be floated to the left to have a balanced left and right border.
+    // There might be a rigged right border because of rounding errors. 
+    [class*="col"] + [class*="col"]:last-child {
+        float: right;
+    }
+    // In case you want to have the last class to the left, add the class ".end" and it will be on the left.
+    [class*="col"] + [class*="col"].end {
+        float: left;
+    }
+
+    // 2. Small grid setup
+
+    // Set up the grid. The class names for smallGrid [sn] and large grid [ln] are different to allow 2 classes of grids :)
+
+    .s1 {width:$c1;}
+    .s2 {width:$c2;}
+    .s3 {width:$c3;}
+    .s4 {width:$c4;}
+    .s5 {width:$c5;}
+    .s6 {width:$c6;}
+    .s7 {width:$c7;}
+    .s8 {width:$c8;}
+    .s9 {width:$c9;}
+    .s10 {width:$c10;}
+    .s11 {width:$c11;}
+    .s12 {width:$c12;}
+    
+    // 3. Imports
+
+    // Import small Horizontal soureorder grid here:
+    //@import "import/sourceOrder/smallGridHorizontal";
+    
+    // import bloggrid small here:
+    //@import "import/blogGrid/small";
+}

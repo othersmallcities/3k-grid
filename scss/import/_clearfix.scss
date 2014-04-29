@@ -1,0 +1,18 @@
+// Clearfix, based of Nicolas Gallagher's micro clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+
+// It has been extened to fully support the grid. I include the trigger for IE 6/7 in the IE file!
+
+// Use the ".cf" class on elements to clear them!
+
+.row:before, 
+.row:after,
+.cf:before, 
+.cf:after {
+	content:""; 
+	display:table; 
+}
+
+.row:after,
+.cf:after {
+	clear: both;
+}

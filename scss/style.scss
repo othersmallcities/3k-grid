@@ -1,0 +1,15 @@
+// This file will load all your styles. For other possibilities check the read me.
+
+// In order to properly support IE, I call in the 2 grid files here. This way, we only need to call the large grid into IE.
+
+// Index:
+
+// 1. collector
+// 2. small grid (size defined in $smallGrid)
+// 3. large grid (size defined in $largeGrid)
+
+@import "collector";
+
+@import "smallGrid";
+
+@import "largeGrid";

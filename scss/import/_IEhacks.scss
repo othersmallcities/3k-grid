@@ -1,0 +1,24 @@
+// This file should contain all IE specific hacks.
+
+// Index
+
+	// 1. IE clearfix hack
+	// 2. Image scaling
+
+
+// 1. IE clearfix hack
+
+	.row, .cf {
+		zoom: 1;
+	}
+	// This forces "has Layout" and is needed for IE 6 & 7
+
+// 2. Image scaling 
+
+	img {
+		-ms-interpolation-mode: bicubic;
+	}
+	// When images are set to width 100% in their respective container and get scalled they look damn ugly on IE 8 and blow. This allows proper scaling without artifacts.
+	// For IE 6, see this: http://unstoppablerobotninja.com/entry/fluid-images/
+
+	// see also: http://jakearchibald.github.io/sass-ie/

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+<head>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style-demo.css">
+	<!-- this script is used to support IE 6 & 7 -->
+	<!--[if lte IE 7]>
+	
+	<![endif]-->
+	<!-- add modernizr instead! -->
+	<!-- all demo styles: -->
+	<style type="text/css">
+		body {
+			color: #333;
+		}
+		main {
+			box-shadow: 0px 0px 5px 0px rgba(10, 10, 10, 0.3);
+			background: #fafafa;
+		}
+		
+		.styleguide .col:not(.intro), 
+		.styleguide .bGrid2 li, 
+		.styleguide .bGrid4 li, 
+		.styleguide .bGrid6 li {
+			background: #2A4B6C;
+			border: 1px solid #f1f1f1;
+			color: #f1f1f1;
+		}
+		.col:first-of-type:not(.intro),
+		.styleguide .centCol, 
+		.styleguide .bGrid2 li:nth-of-type(odd), 
+		.styleguide .bGrid4 li:nth-of-type(odd), 
+		.styleguide .bGrid6 li:nth-of-type(odd) {
+			background: #8EBEFF;
+			border: 1px solid #f1f1f1;
+			color: #333;
+		}
+		.code {
+			border: 1px solid #eee;
+		}
+	</style>
+	<title>3k grid</title>
+</head>
+<body>
+	<header class="row" role="banner">
+		<h1 class="s12 col intro">3k grid</h1>
+		<p>Basically Version 0.5...</p>
+	</header>
+	<main class="row" role="main">
+		<article class="s12 col intro">
+			<h1>The Grid</h1>
+			<p>Both, large and small grid come with 12 columns, but break at different sizes. Please change the window size to see the effect.</p>
+			<p>All <code>variables</code> can be found in "import/_layoutBase.scss".</p>
+			<p>Please note that the class <code>col</code> has to be added to each column, otherwise it will not work.</p>
+			<p>Just checkout the code examples on the right.</p>
+			<section class="styleguide">
+				<h1>Small Grid</h1>
+				<div class="row">
+					<p class="s6 col intro">Use this grid universially. It kicks in at <code>$smallGrid</code> (here 450px) and will grow till it reaches <code>$maxWidth</code> (here 1200px). Usually a grid will have <a href="#not12">12 columns</a> altogether.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s4 col"&gt;.s4&lt;/p&gt;
+  &lt;p class="s8 col"&gt;.s8&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+				</div>
+				<div class="row">
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+				</div>
+				<div class="row">
+					<p class="s3 col"><code>.s3</code></p>
+					<p class="s3 col"><code>.s3</code></p>
+					<p class="s3 col"><code>.s3</code></p>
+					<p class="s3 col"><code>.s3</code></p>
+				</div>
+				<div class="row">
+					<p class="s4 col"><code>.s4</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s6 col"><code>.s6</code></p>
+				</div>
+				<div class="row">
+					<p class="s5 col"><code>.s5</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s5 col"><code>.s5</code></p>
+				</div>
+				<div class="row">
+					<p class="s6 col"><code>.s6</code></p>
+					<p class="s6 col"><code>.s6</code></p>
+				</div>
+				<div class="row">
+					<p class="s7 col"><code>.s7</code></p>
+					<p class="s5 col"><code>.s5</code></p>
+				</div>
+				<div class="row">
+					<p class="s8 col"><code>.s8</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+				</div>
+				<div class="row">
+					<p class="s9 col"><code>.s9</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+				</div>
+				<div class="row">
+					<p class="s10 col"><code>.s10</code></p>
+					<p class="s2 col"><code>.s2</code></p>
+				</div>
+				<div class="row">
+					<p class="s11 col"><code>.s11</code></p>
+					<p class="s1 col"><code>.s1</code></p>
+				</div>
+				<div class="row">
+					<p class="s12 col"><code>.s12</code></p>
+				</div>
+				<div class="row">
+					<p id="not12"class="s6 col intro">You can also create a row which does not add up to 12 columns. The last column will be automatically floated to the right.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s3 col"&gt;.s3&lt;/p&gt;
+  &lt;p class="s4 col"&gt;.s4&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s3 col"><code>.s3</code></p>
+					<p class="s4 col"><code>.s4</code></p>
+				</div>
+				<div class="row">
+					<p class="s6 col intro">If you want to last column to be floated left, please add the class <code>.end</code>.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s3 col"&gt;.s3&lt;/p&gt;
+  &lt;p class="s4 col end"&gt;.s4 .end&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s3 col"><code>.s3</code></p>
+					<p class="s4 col end"><code>.s4 .end</code></p>
+				</div>
+			</section>
+			<hr />
+			<section class="styleguide">
+				<h1>Large Grid</h1>
+				<div class="row">
+					<p class="s6 col intro">The large grid works the same, but it kicks in at <code>$largeGrid</code> (here 840px) and will grow till it reaches <code>$maxWidth</code>.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="l4 col"&gt;.l4&lt;/p&gt;
+  &lt;p class="l8 col"&gt;.l8&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+				</div>
+				<div class="row">
+					<p class="l2 col"><code>.l2</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+				</div>
+				<div class="row">
+					<p class="l3 col"><code>.l3</code></p>
+					<p class="l3 col"><code>.l3</code></p>
+					<p class="l3 col"><code>.l3</code></p>
+					<p class="l3 col"><code>.l3</code></p>
+				</div>
+				<div class="row">
+					<p class="l4 col"><code>.l4</code></p>
+					<p class="l4 col"><code>.l4</code></p>
+					<p class="l4 col"><code>.l4</code></p>
+				</div>
+				<div class="row">
+					<p class="l5 col"><code>.l5</code></p>
+					<p class="l5 col"><code>.l5</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+				</div>
+				<div class="row">
+					<p class="l6 col"><code>l6</code></p>
+					<p class="l6 col"><code>l6</code></p>
+				</div>
+				<div class="row">
+					<p class="l7 col"><code>l7</code></p>
+					<p class="l5 col"><code>l5</code></p>
+				</div>
+				<div class="row">
+					<p class="l8 col"><code>l8</code></p>
+					<p class="l1 col"><code>l1</code></p>
+					<p class="l2 col"><code>l2</code></p>
+					<p class="l1 col"><code>l1</code></p>
+				</div>
+				<div class="row">
+					<p class="l9 col"><code>l9</code></p>
+					<p class="l2 col"><code>l2</code></p>
+					<p class="l1 col"><code>l1</code></p>
+				</div>
+				<div class="row">
+					<p class="l10 col"><code>.l10</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+				</div>
+				<div class="row">
+					<p class="l11 col"><code>.l11</code></p>
+					<p class="l1 col"><code>.l1</code></p>
+				</div>
+				<div class="row">
+					<p class="l12 col"><code>.l12</code></p>
+				</div>
+				<p>Again, less then 12 columns rows are possible. The code is the same as above.</p>
+				<div class="row">
+					<p class="l3 col"><code>.l3</code></p>
+					<p class="l2 col"><code>.l2</code></p>
+				</div>
+				<div class="row">
+					<p class="l3 col"><code>.l3</code></p>
+					<p class="l2 col end"><code>.l2 .end</code></p>
+				</div>
+			</section>
+			<hr />
+			<section class="styleguide">
+				<h1>Mixed Grid</h1>
+				<div class="row">
+					<p class="s6 col intro">Mixed grids are very interesting for changing the layout at different breakpoints. You could add more grid sizes for additional breakpoints if needed. (But be careful to not blow up CSS too much!)</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s4 l5 col"&gt;.s4 .l5&lt;/p&gt;
+  &lt;p class="s4 l3 col"&gt;.s4 .l4&lt;/p&gt;
+  &lt;p class="s4 l4 col"&gt;.s4 .l4&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s4 l5 col"><code>.s4 .l5</code></p>
+					<p class="s4 l3 col"><code>.s4 .l3</code></p>
+					<p class="s4 l4 col"><code>.s4 .l4</code></p>
+				</div>
+				<div class="row">
+					<p class="s5 l2 col"><code>.s5 .l2</code></p>
+					<p class="s4 l8 col"><code>.s4 .l8</code></p>
+					<p class="s3 l2 col"><code>.s3 .l2</code></p>
+				</div>
+				<div class="row">
+					<p class="s2 l6 col"><code>.s2 .l6</code></p>
+					<p class="s10 l6 col"><code>.s10 .l6</code></p>
+				</div>
+				<div class="row">
+					<p class="s8 l1 col"><code>.s8 .l1</code></p>
+					<p class="s4 l11 col"><code>.s4 .l11</code></p>
+				</div>
+				<div class="row">
+					<p class="s6 col intro">As for mixed columns: You can change them based on breakpoint. This here behaves the same at all breakpoints.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s3 l2 col"&gt;.s3 .l2&lt;/p&gt;
+  &lt;p class="s3 l4 col"&gt;.s3 .l4&lt;/p&gt;
+  &lt;p class="s4 l4 col"&gt;.s4 .l4&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s3 l2 col"><code>.s3 .l2</code></p>
+					<p class="s3 l4 col"><code>.s3 .l4</code></p>
+					<p class="s4 l4 col"><code>.s4 .l4</code></p>
+				</div>
+				<div class="row">
+					<p class="s6 col intro">This one behaves differently at each breakpoint: At <code>$largeGrid</code> size it adds up to 12, at <code>$smallGrid</code> it does not.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s3 l6 col"&gt;.s3 .l6&lt;/p&gt;
+  &lt;p class="s3 l2 col"&gt;.s3 .l2&lt;/p&gt;
+  &lt;p class="s4 l4 col"&gt;.s4 .l4&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s3 l6 col"><code>.s3 .l6</code></p>
+					<p class="s3 l2 col"><code>.s3 .l2</code></p>
+					<p class="s4 l4 col"><code>.s4 .l4</code></p>
+				</div>
+				<div class="row">
+					<p class="s6 col intro">One more thing: If you decice to float the last column left, it will happen at all breakpoints (which could be changed, but again blows up the css).</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s3 l2 col"&gt;.s3 .l2&lt;/p&gt;
+  &lt;p class="s3 l4 col"&gt;.s3 .l4&lt;/p&gt;
+  &lt;p class="s4 l4 col end"&gt;.s4 .l4 .end&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s3 l2 col"><code>.s3 .l2</code></p>
+					<p class="s3 l4 col"><code>.s3 .l4</code></p>
+					<p class="s4 l4 col end"><code>.s4 .l4 .end</code></p>
+				</div>
+			</section>
+			<hr />
+			<section class="styleguide">
+				<h1>Centered Columns</h1>
+				<div class="row">
+					<p class="s6 col intro">Centred columns are only that, columns which should be used to centre content. You can add the class of <code>.tCent</code> to centre the content of the column as well.<br />Please note that only one centred column per row <em>should exist</em>, but that is up to you.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s6 centCol"&gt;.s6 .centCol&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class="row"&gt;
+  &lt;p class="l7 centCol"&gt;.l7 .centCol&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s6 centCol">.s6 .centCol</p>
+				</div>
+				<div class="row">
+					<p class="l7 centCol">.l7 .centCol</p>
+				</div>
+			</section>
+			<hr />
+			<section class="styleguide">
+				<h1>Nested Columns</h1>
+				<div class="row">
+					<p class="s6 col intro">Nesting columns is just as easy!</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;section class="s8 col"&gt;
+    &lt;div class="row"&gt;
+      &lt;p class="s6 col"&gt;.s6 .col&lt;/p&gt;
+      &lt;p class="s6 col"&gt;.s6 .col&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;p class="l2 col"&gt;.l2 .col&lt;/p&gt;
+      &lt;p class="l6 col"&gt;.l6 .col&lt;/p&gt;
+      &lt;p class="l4 col"&gt;.l4 .col&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;p class="s4 col"&gt;.s4 .col&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<div class="s8 col">
+						<div class="row">
+							<p class="s6 col">.s6 .col</p>
+							<p class="s6 col">.s6 .col</p>
+						</div>
+						<div class="row">
+							<p class="l2 col">.l2 col</p>
+							<p class="l6 col">.l6 col</p>
+							<p class="l4 col">.l4 col</p>
+						</div>
+					</div>
+					<p class="s4 col">.s4 .col</p>
+				</div>
+				<div class="row">
+					<p class="s6 col intro">You can use centred columns nested inside normal columns&hellip;</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="s3 col"&gt;.s3 .col&lt;/p&gt;
+  &lt;section class="s9 col"&gt;
+    &lt;div class="row"&gt;
+      &lt;p class="l11 centCol"&gt;.l11 .centCol&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="s3 col">.s3 .col</p>
+					<div class="s9 col">
+						<div class="row">
+							<p class="l11 centCol">.l11 .centCol</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<p class="s6 col intro">&hellip;and the other way round</p>
+<pre class="s6 col intro code">&lt;div class="row"&gt;
+  &lt;article class="s8 centCol"&gt;
+    &lt;div class="row"&gt;
+      &lt;p class="s3 col"&gt;.s3 .col&lt;/p&gt;
+      &lt;p class="s9 col"&gt;.s9 .col&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/article&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+				<div class="row">
+					<div class="s8 centCol">
+						<div class="row">
+							<p class="s3 col">.s3 .col</p>
+							<p class="s9 col">.s9 col</p>
+						</div>
+					</div>
+				</div>
+			</section>	
+			<hr />
+			<section class="styleguide">
+				<h1>Source ordered Columns</h1>
+				<div class="row">
+					<p class="s6 col intro">Source ordered columns can be very useful if you want to display secondary information before primary information, for example: Display a navigational sidebar on the left and the main content on the right.<br />For SEO and screen readers it is better to write the main content first and let the code for the sidebar follow.<br />You must activate source ordering in the each layout file, starting with <code>_smallGrid.scss</code>.<br />You <strong>have to declare both</strong> the <em>normal row width</em> class and the <em>push / pull</em> class.<br />Please improve this, if you have a good idea.</p>
+<pre class="s6 col intro code">&lt;article class="row"&gt;
+  &lt;p class="ph-8 l4 col"&gt;.ph-8 .l4 .col&lt;/p&gt;
+&lt;/article&gt;
+&lt;article class="row"&gt;
+  &lt;p class="ph-4 l8 col"&gt;.ph-4 .l8 .col; last&lt;/p&gt;
+&lt;/article&gt;
+</pre>
+				</div>
+				<div class="row">
+					<p class="ph-8 l4 col">ph-8, l4</p>
+					<p class="pl-4 l8 col">pl-4, l8; last</p>
+				</div>
+				<div class="row">
+					<p class="ph-2 l10 col">ph-2, l10</p>
+					<p class="pl-10 l2 col">pl-10, l2; last</p>
+				</div>
+				<div class="row">
+					<p class="sPh-8 s4 col">sPh-8, s4</p>
+					<p class="sPl-4 s8 col">sPl-4, s8, last</p>
+				</div>
+				<div class="row">
+					<p class="sPh-2 s10 col">sPh-2, s10</p>
+					<p class="sPl-10 s2 col">sPl-10, s2; last</p>
+				</div>
+				<div class="row">
+					<p class="s6 col intro">You can activate source ordering for small grids only, large grids require the small grid file, since all push (<code>.ph &amp; .sph</code>) and pull (<code>.pl &amp; .spl</code>) classes are stored there.<br />Change it as needed.</p>
+					<p class="s6 col intro">I have seperated them into large and small to enable you to push and pull differently on each size if needed. If you see a need to save some bytes and do not need one or the other class, just disable what you do not need.</p>
+				</div>
+			</section>
+			<hr />
+			<section class="styleguide">
+				<h1>A simple block grid</h1>
+				<div class="row">
+					<p class="s6 col intro">The block grid is specially made for displaying blocks of images.<br />I am not yet 100% happy with how it works. Check the code if you needed and improve on it, please.<br />Like the source ordering it has to be activated separately, staring in <code>_layoutBase.scss</code>. The large block grid also depends on the small block grid, just like source ordering.<br />The idea comes from <a href="http://foundation.zurb.com/docs/components/block_grid.html">here</a>, though I have greatly simplified it.<br />You can add 6 items (<code>.bGrid2</code>), 4 items (<code>.bGrid4</code>) or 2 items (<code>.bGrid6</code>) per row with auto reflow.<br />You can activate the small version independently of the large version.</p>
+<pre class="s6 col intro code">&lt;ul class="bGrid2"&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+				</div>
+				<ul class="bGrid2">
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/7005800383/" title="one in a thousend by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7199/7005800383_e7e6c81803_q.jpg" width="150" height="150" alt="one in a thousend"></a></li>
+				</ul>
+				<ul class="bGrid4">
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/6045466683/" title="Looking by taotsu, on Flickr"><img src="http://farm7.staticflickr.com/6088/6045466683_534af77b29_m.jpg" width="240" height="180" alt="Looking"></a></li>
+				</ul>
+				<ul class="bGrid6">
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+					<li><a href="http://www.flickr.com/photos/taotsu-pro/8854030414/" title="writing by taotsu, on Flickr"><img src="http://farm8.staticflickr.com/7395/8854030414_c72541c124.jpg" width="333" height="500" alt="writing"></a></li>
+				</ul>
+			</section>
+			<hr />
+			<p class="tCent">If there is more, add up here ^-^</p>
+		</article>
+	</main>
+	<footer class="row" role="contentinfo">
+		<p class="s6 centCol intro tCent">written by <a href="http://taotsu.net">taotsu</a>; <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></p>
+	</footer>
+</body>
+</html>

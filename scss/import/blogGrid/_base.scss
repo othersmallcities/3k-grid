@@ -1,0 +1,24 @@
+// This is an atempted to recreate foundations blockgrid for images.
+
+// It would be easy enough to copy their dance around issues, but that produces a lot of code overhead.
+
+// I try to keep this as simple as possible. :)
+
+// Ok, the numbers in _small and _large for margin-left, margin and width respectively are kinda magic numbers. They are based on measurements in Safari, Chrome and Firefox.
+
+// When changing the gird or fontsize, these might break. Not sure. Sorry!
+
+// This is really tuned to minimal CSS useage. If you need something that is more stable, check this: http://foundation.zurb.com/docs/components/block_grid.html
+
+// I had look at github, it does need about 5% more code which makes it heavier.
+
+
+	.bGrid2, .bGrid4, .bGrid6 {
+		li {
+			margin-bottom: $bottomMargin; // same as normal grid!
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}

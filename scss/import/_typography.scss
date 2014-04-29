@@ -1,0 +1,35 @@
+// This file includes contain anything related to typography.
+
+// The variables are in tools!
+
+// Index
+
+	// 1. h(n) styles
+	// 2. emphasis
+	// 3. list classes
+	// 4. up to you...
+
+// 1. h(n) styles
+
+	//h(n), bold, strong and anything else bold!
+
+	h1, h2, h3, h4, h5, h6, strong, b {
+		font-family: $bold-font-family;
+		font-weight: bold;
+	}
+
+	// add sizes & margins for h1 ~ h6 here
+
+// 2. emphasis & italics
+
+	em, i, dfn {
+		// add font familiy style
+		font-style: italic;
+	}
+
+// 3. list classes
+
+ul, ol {
+	list-style: none outside;
+	padding: 0; //padding reset!
+}

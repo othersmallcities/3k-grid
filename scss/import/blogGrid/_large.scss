@@ -1,0 +1,9 @@
+ //simple block grid continues here:
+    //ok, as for class names: 6 means up to 2 items per row, 4 means up to 4, 2 means up to 6
+    .bGrid2, .bGrid4, .bGrid6 {
+    	margin: 0 -0.9% 0 0; //off set to have it half way centered and reset _small.scss stuff
+    }
+
+    .bGrid2 li {width: 16.2%;}
+    .bGrid4 li {width: 32.75%;}
+    .bGrid6 li {width: 49.3%;}

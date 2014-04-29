@@ -1,0 +1,15 @@
+// This file is for lagcy IE < 9. Once IE 8 and earlier is dead, movie this file to the museum!
+
+// <IE 9 do not support media queries and many other good things.
+// If you have to override many styles, please consider to breakout what you need from collector and import it directly!
+
+// Index:
+
+// 1. collector
+// 2. large grid (size defined in $largeGrid)
+// 3. IEhacks -> rather use a reset here maybe
+
+
+@import "collector";
+
+@import "import/IEhacks";

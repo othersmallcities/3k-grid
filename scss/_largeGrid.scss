@@ -1,0 +1,44 @@
+// This is the large grid for larger view ports.
+
+// This gird is ideal for big iPads in Landscape, PC's etc.
+
+// The variable defining the viewport width is defined in "import/_tools.scss"
+
+// Index
+
+    // 1. Row setup
+    // 2. Large grid setup
+    // 3. Imports
+
+@media only screen and (min-width: $largeGrid) {
+
+    // 1. Row setup
+
+    .row {
+        // We need to make sure that we have a proper width here, in order to center the thing.
+        // The margin for that is defined in "import/_layoutbase.scss"
+        width: $maxWidth;
+    }
+    // 2. Grid setup
+
+    .l1 {width:$c1;}
+    .l2 {width:$c2;}
+    .l3 {width:$c3;}
+    .l4 {width:$c4;}
+    .l5 {width:$c5;}
+    .l6 {width:$c6;}
+    .l7 {width:$c7;}
+    .l8 {width:$c8;}
+    .l9 {width:$c9;}
+    .l10 {width:$c10;}
+    .l11 {width:$c11;}
+    .l12 {width:$c12;}
+
+    // 2. Imports
+
+    // Import small Horizontal soureorder grid here:
+    //@import "import/sourceOrder/largeGridHorizontal";
+    
+    // import bloggrid small here:
+    //@import "import/blogGrid/large";
+}

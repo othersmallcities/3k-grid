@@ -1,0 +1,15 @@
+//simple block grid...
+    //only 3 settings make sense here: blocks of 2, 4, 6 elements
+    //tought: on smaller screens a max of 2 should be allowed!
+    //this is for now only planned to be used with lists!
+    //the rest is below
+
+    .bGrid2, .bGrid4, .bGrid6 {
+        margin-left: emCalc(6px); //off set to have it half way centered
+    }
+
+    .bGrid2 li, .bGrid4 li, .bGrid6 li {
+            display: inline-block;
+            vertical-align: top;
+            width: $c6 - 1;
+        }

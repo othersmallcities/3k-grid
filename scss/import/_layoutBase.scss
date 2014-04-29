@@ -1,0 +1,139 @@
+// This file includes 2 things:
+	// 1. all setup variables for the grid
+	// 2. anything that is needed to create the liniar flow.
+
+// This gird is based on the fine work of Zurb; it is pracitally the same as the Foundation 2 [??] gird, but reworked to be mobile first.
+// I have taken the original from .net magazine, it is now hosted here: http://www.creativebloq.com/design/building-modern-grid-system-5122962
+
+// As for the blog grid, I have prepared 3 files:
+	// - "bloggrid/_base.scss" for the base
+	// - "bloggrid/_small.scss" for the small
+	// - "bloggrid/_large.scss" for the large.
+// Each file is imported into each grid file.
+
+// The same goes for source ordering
+
+// Index
+	
+	// 1. Setup for embedded media
+
+	// 2. Grid Variables
+
+		// 2.1 Margins & Paddings
+		// 2.2 Grid vars
+		// 2.3 Column width vars 
+
+	// 3. Rows & Columns
+
+		// 3.1 Rows
+		// 3.2 Columns
+		// 3.3 Bloggrid base import
+
+// 1. Setup for embedded media
+
+	img {
+		border: 0; // Remove border when inside `a` element in IE 8/9.
+	    height: auto; // This ensures images do not get stretched in strange ways by keeping the original aspect ratio 
+	}
+	
+	img,
+ 	object,
+	embed,
+	video,
+	input { 
+	    max-width: 100%;// This ensures that embedded content does not overflow if the surrounding box is smaller then the content
+	}
+	
+
+	// If there is a need for iFrames, check this: http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-weird-resizing#answer-12678294
+	// Also of interest: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+
+	#map_canvas img, 
+	.map_canvas img {
+	    max-width: none!important;
+	}
+	// Google's embedded maps is a special child. It shall not have a max-width, otherwise the image elements on maps will break!
+
+// 2. Grid variables
+
+	//These variables work globally, but should propably only be used for the grid. If you need the same values, please replicate them in "_tools.scss", to reduce the risk of breaking the grid or something else, when changing the value.
+
+	// 2.1 Margins & paddings
+
+	$sideMargin: emCalc(10px); // as padding for cols and as negative margin for nested rows
+//-----> em's seem not too work! Test
+	$bottomMargin: emCalc(16px); // attach a margin to the bottom
+
+	// 2.2 Grid variables
+
+	// The Grid breakpoint variables are calulated with ems.
+	// This has two major advantiges:
+		// 1. If you change the $em-base in import/tools.scss, everything will change proportionally.
+		// 2. If the user changes the fontsize or zooms in, the grid stays fluid and will break at breakpoints once reached.
+	// You can test this behaviour by zooming in or zooming out the index.html.
+
+	$smallGrid: emCalc(450px);
+	// This variable defines the breakpoint for kicking in the samll grid.
+	// Set it as needed, I set the default to 480px.
+
+	$largeGrid: emCalc(840px);
+	// This variable defines the breakpoint to kick in the large grid.
+	// Set it as needed, I set the default to 840px.
+
+	$maxWidth: emCalc(1200px);
+	// This variable defines how wide your page will be at maximum.
+	// If you design a page with components, then you do not need this. But if you have a traditional design, keep it narrow :D
+
+	// 2.3 Column vars
+
+	$c1:8.33333333333%;
+	$c2:16.6666666667%;
+	$c3:25.0%;
+	$c4:33.3333333333%;
+	$c5:41.6666666667%;
+	$c6:50.0%;
+	$c7:58.3333333333%;
+	$c8:66.6666666667%;
+	$c9:75.0%;
+	$c10:83.3333333333%;
+	$c11:91.6666666667%;
+	$c12:100%;
+
+	// These could potentially auto created. But they work ok so far.
+	// As for where the values come from: http://alistapart.com/article/fluidgrids & the landmark: http://alistapart.com/article/responsive-web-design
+
+// 3. Rows & Columns
+	
+	// 3.1 Rows:
+
+	.row {
+		margin: 0 auto $bottomMargin; //give it all some space to breath at the bottom and be sure that they stay centerred!
+	    
+	    // the following 2 reset and restructure, test if still needed. This is highly depending if you do only Smart Device or include older PC sites
+	    min-width:0;
+	    max-width:100%;
+	    width:auto;
+	}
+
+	// nesting resets
+	.row .row {
+	    margin: 0 (-$sideMargin) $bottomMargin; //nullify the col padding, so nested rows align. Brackets are needed in order to parse the 0 top bottom!
+	    // the bottom margin has to be repeated... shoot.
+	    min-width: 0;
+	    max-width: $maxWidth; // do not make it bigger then needed.
+	    width: auto; // also reset. still needed?
+	}
+
+	// 3.2 Columns
+
+	.col,
+	.centCol {
+	    min-height: 1px; // This makes sure empty cols will not kill the flow order with floating objects
+	    margin: 0;// Make everything even. There should be easier ways to do this...
+	    padding: 0 $sideMargin;
+	    width: 100%; // This lets the grid reflow into a liniar page relailable.
+	}
+
+	// 3.3 Bloggrid base import
+
+    //@import "import/blogGrid/base";

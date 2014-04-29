@@ -1,0 +1,33 @@
+// This file contains large grid source ordering!
+
+// Please import into "_largeGrid.scss"
+
+// You will need the push and pull classes, which are currently only in "_smallGridHorizontal.scss". If you do not need small sourceordering you can simply add the pull / push classes here.
+
+    //push
+    .ph-1 {left:$c1;}
+    .ph-2 {left:$c2;}
+    .ph-3 {left:$c3;}
+    .ph-4 {left:$c4;}
+    .ph-5 {left:$c5;}
+    .ph-6 {left:$c6;}
+    .ph-7 {left:$c7;}
+    .ph-8 {left:$c8;}
+    .ph-9 {left:$c9;}
+    .ph-10 {left:$c10;}
+    .ph-11 {left:$c11;}
+    .ph-12 {left:$c12;}
+
+    //pull
+    .pl-1 {right:$c1;}
+    .pl-2 {right:$c2;}
+    .pl-3 {right:$c3;}
+    .pl-4 {right:$c4;}
+    .pl-5 {right:$c5;}
+    .pl-6 {right:$c6;}
+    .pl-7 {right:$c7;}
+    .pl-8 {right:$c8;}
+    .pl-9 {right:$c9;}
+    .pl-10 {right:$c10;}
+    .pl-11 {right:$c11;}
+    .pl-12 {right:$c12;}

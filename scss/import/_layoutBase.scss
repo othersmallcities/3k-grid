@@ -14,14 +14,14 @@
 // The same goes for source ordering
 
 // Index
-	
+
 	// 1. Setup for embedded media
 
 	// 2. Grid Variables
 
 		// 2.1 Margins & Paddings
 		// 2.2 Grid vars
-		// 2.3 Column width vars 
+		// 2.3 Column width vars
 
 	// 3. Rows & Columns
 
@@ -33,22 +33,22 @@
 
 	img {
 		border: 0; // Remove border when inside `a` element in IE 8/9.
-	    height: auto; // This ensures images do not get stretched in strange ways by keeping the original aspect ratio 
+	  height: auto; // This ensures images do not get stretched in strange ways by keeping the original aspect ratio
 	}
-	
+
 	img,
  	object,
 	embed,
 	video,
-	input { 
+	input {
 	    max-width: 100%;// This ensures that embedded content does not overflow if the surrounding box is smaller then the content
 	}
-	
+
 
 	// If there is a need for iFrames, check this: http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-weird-resizing#answer-12678294
 	// Also of interest: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 
-	#map_canvas img, 
+	#map_canvas img,
 	.map_canvas img {
 	    max-width: none!important;
 	}
@@ -103,12 +103,12 @@
 	// As for where the values come from: http://alistapart.com/article/fluidgrids & the landmark: http://alistapart.com/article/responsive-web-design
 
 // 3. Rows & Columns
-	
+
 	// 3.1 Rows:
 
 	.row {
 		margin: 0 auto $bottomMargin; //give it all some space to breath at the bottom and be sure that they stay centerred!
-	    
+
 	    // the following 2 reset and restructure, test if still needed. This is highly depending if you do only Smart Device or include older PC sites
 	    min-width:0;
 	    max-width:100%;
@@ -136,4 +136,4 @@
 
 	// 3.3 Bloggrid base import
 
-    //@import "import/blogGrid/base";
+    @import "import/blogGrid/base";

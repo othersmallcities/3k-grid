@@ -6,7 +6,7 @@ It is a small responsive mobile first grid, I have put together for a project. T
 
 In its basic form it is only 3k big, with extensions 5k, but I have hope I can make it a even smaller.
 
-Its written in SASS and compiled with compass, but should work without compass. The file structure was an early experiment how to organise files better; sadly I failed and will redo this in the future.
+Its written in scss and now compass free. The file structure was an early experiment how to organise files better; sadly I failed and will redo this in the future.
 
 A demo can be found here on [taotsu.net](http://taotsu.net/3k/).
 
@@ -22,6 +22,10 @@ Since Foundation has an **MIT license** and this contains some original ideas fr
 
 Otherwise, any non-code content is licensed [cc-by](http://creativecommons.org/licenses/by-sa/4.0/).
 
-Feedback is welcome and I hope I can push version 1.0 soon.
+**************
 
-[To do: clean up with gitignore...]
+## Updates Oct. 2016
+
+* removed all dependencies on compass
+* updated normalize to v.5.0.0
+* included a source map and got rid of the demo file -> now it will always compile everything

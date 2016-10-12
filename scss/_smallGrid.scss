@@ -20,16 +20,16 @@
     // Columns float left for now. If flexbox ever works or better, css grid layout and regions reach some browser support, lets kill this.
     // Inline box is also not great, as there are problems with IE and some odd Android devices.
     .col {
-        float: left; 
+        float: left;
         position: relative; // This way the cols will not overlap. It is also needed to enable source ordering!
     }
     // This class allows to center columns.
     .centCol {
-        margin: 0 auto; 
+        margin: 0 auto;
     }
 
     // The last column in a row will be floated to the left to have a balanced left and right border.
-    // There might be a rigged right border because of rounding errors. 
+    // There might be a rigged right border because of rounding errors.
     [class*="col"] + [class*="col"]:last-child {
         float: right;
     }
@@ -54,12 +54,12 @@
     .s10 {width:$c10;}
     .s11 {width:$c11;}
     .s12 {width:$c12;}
-    
+
     // 3. Imports
 
     // Import small Horizontal soureorder grid here:
-    //@import "import/sourceOrder/smallGridHorizontal";
-    
+    @import "import/sourceOrder/smallGridHorizontal";
+
     // import bloggrid small here:
-    //@import "import/blogGrid/small";
+    @import "import/blogGrid/small";
 }
